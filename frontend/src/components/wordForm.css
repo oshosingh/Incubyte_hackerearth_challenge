@@ -1,0 +1,36 @@
+.form-parent {
+  width: 40rem;
+  margin: 3rem auto;
+  max-width: 90%;
+  background-color: white;
+}
+
+.form-header {
+  background-color: rgba(43, 3, 43, 0.836);
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.form-body {
+  padding: 1rem;
+}
+
+.form-body input {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 2rem;
+}
+
+button {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(43, 3, 43, 0.836);
+  color: white;
+}
+
+.error {
+  background-color: coral;
+}
