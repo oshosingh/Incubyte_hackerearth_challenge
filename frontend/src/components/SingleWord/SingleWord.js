@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { updateWord } from "../../RestApi";
+import { deleteWord, updateWord } from "../../RestApi";
 
 function SingleWord(props) {
   const [newWord, setNewWord] = useState("");
@@ -10,7 +10,7 @@ function SingleWord(props) {
     if (newWord.length > 0) {
       setInvalidInput(false);
     }
-    if (props.wordPostSuccessUpdate === true) {
+    if (props.wordPostSuccessState === true) {
       props.refreshOnWordUpdate(false);
     }
   };
@@ -26,6 +26,17 @@ function SingleWord(props) {
     });
   };
 
+  const handleDeleteWord = () => {
+    if (props.wordPostSuccessState === true) {
+      props.refreshOnWordUpdate(false);
+    }
+    deleteWord(props.elementindex).then((data) => {
+      if (data === 1) {
+        props.refreshOnWordUpdate(true);
+      }
+    });
+  };
+
   return (
     <>
       <h4> {props.word.wordId}. </h4>
@@ -37,6 +48,7 @@ function SingleWord(props) {
         value={newWord}
         className={invalidInput ? "error" : "edit-word-input"}
       />
+      <button onClick={handleDeleteWord}> Delete Word </button>
     </>
   );
 }

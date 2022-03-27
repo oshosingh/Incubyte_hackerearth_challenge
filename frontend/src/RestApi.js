@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const restUrl = "https://oshobackend.herokuapp.com";
+// const restUrl = "http://localhost:8080";
 
 export const postWord = async (data) => {
   const res = await axios.post(`${restUrl}/api/add/word?word=${data}`);
@@ -26,4 +27,12 @@ export const updateWord = async (wordId, newWord) => {
     return res.data;
   }
   return [];
+};
+
+export const deleteWord = async (wordId) => {
+  const res = await axios.delete(`${restUrl}/api/delete/word?wordId=${wordId}`);
+  if (res.status === 200) {
+    return 1;
+  }
+  return 0;
 };

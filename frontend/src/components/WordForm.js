@@ -39,6 +39,8 @@ function WordForm() {
         setWordPostSuccess(true);
       }
     });
+
+    setWord("");
   };
 
   const refreshOnWordUpdate = (value) => {
@@ -57,6 +59,7 @@ function WordForm() {
             <input
               type="text"
               onChange={handleChange}
+              value={word}
               className={invalidInput ? "error" : ""}
             />
           </div>
