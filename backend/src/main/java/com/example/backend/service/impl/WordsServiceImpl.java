@@ -38,4 +38,10 @@ public class WordsServiceImpl implements WordsService{
 		wordsRepository.updateWord(wordId, newWord);
 		return ResponseEntity.ok().body("Record Updated");
 	}
+
+	@Override
+	public ResponseEntity<Object> deleteWord(Long wordId) {
+		wordsRepository.deleteByWordId(wordId);
+		return ResponseEntity.ok().body("Word Deleted");
+	}
 }

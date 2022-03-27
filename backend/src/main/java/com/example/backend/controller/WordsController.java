@@ -3,6 +3,7 @@ package com.example.backend.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -34,5 +35,11 @@ public class WordsController {
 	@PutMapping("/api/update/word")
 	ResponseEntity<Object> updateWord(@RequestParam Long wordId, @RequestParam String newWord){
 		return wordsService.updateWord(wordId, newWord);
+	}
+	
+	// Delete an existing word
+	@DeleteMapping("/api/delete/word")
+	ResponseEntity<Object> deleteWord(@RequestParam Long wordId){
+		return wordsService.deleteWord(wordId);
 	}
 }

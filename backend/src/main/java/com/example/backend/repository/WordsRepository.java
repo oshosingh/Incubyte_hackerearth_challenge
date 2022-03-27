@@ -17,4 +17,9 @@ public interface WordsRepository extends JpaRepository<WordModel, Integer>{
 	@Transactional
 	void updateWord(Long wordId, String newWord);
 
+	@Query("delete from WordModel w where w.wordId=:wordId")
+	@Modifying
+	@Transactional
+	void deleteByWordId(Long wordId);
+
 }
