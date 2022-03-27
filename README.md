@@ -23,7 +23,7 @@
       
      > This folder contains Spring Boot code for backend APIs that accept input from the frontend and save data in the   database.
      
-     I have created three Apis:
+     I have created four Apis:
      1. Get All Words -> Fetches all the words in the database
      2. Post Word -> Saves a new word in the database.
      3. Update word -> Updates existing word in the database
