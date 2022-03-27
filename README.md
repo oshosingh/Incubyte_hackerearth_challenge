@@ -9,6 +9,11 @@
   3. H2 In Memory Database
   4. JPA 
   5. Heroku (Deployment)
+
+  ### Deployment
+  1. Used Heroku to deploy the applications.
+  2. Frontend Url - > https://oshofrontend.herokuapp.com/
+  3. Backend Url -> https://oshobackend.herokuapp.com
   
   ## Folder Structure
   There are two subfolders in the root folder.
@@ -56,10 +61,4 @@
   ### Build Steps
   1. Frontend -> npm run build
   2. Backend -> mvn clean install
-
-
-  ### Deployment
-  1. Used Heroku to deploy the applications.
-  2. Frontend Url - > https://oshofrontend.herokuapp.com/
-  3. Backend Url -> https://oshobackend.herokuapp.com
     
