@@ -27,6 +27,7 @@
      1. Get All Words -> Fetches all the words in the database
      2. Post Word -> Saves a new word in the database.
      3. Update word -> Updates existing word in the database
+     4. Delete word -> Delete existing word
 
      A screenshot of the Rest API Controller class is shown below.
      
