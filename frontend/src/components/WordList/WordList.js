@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SingleWord from "../SingleWord/SingleWord";
 import "./wordList.css";
 
@@ -11,7 +11,6 @@ function WordList(props) {
             <SingleWord
               word={element}
               key={index}
-              elementindex={index + 1}
               refreshOnWordUpdate={props.refreshOnWordUpdate}
               wordPostSuccessState={props.wordPostSuccessState}
             />

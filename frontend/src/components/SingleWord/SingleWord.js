@@ -20,7 +20,7 @@ function SingleWord(props) {
       setInvalidInput(true);
       return;
     }
-    updateWord(props.elementindex, newWord).then((data) => {
+    updateWord(props.word.wordId, newWord).then((data) => {
       props.refreshOnWordUpdate(true);
       setNewWord("");
     });
@@ -30,7 +30,7 @@ function SingleWord(props) {
     if (props.wordPostSuccessState === true) {
       props.refreshOnWordUpdate(false);
     }
-    deleteWord(props.elementindex).then((data) => {
+    deleteWord(props.word.wordId).then((data) => {
       if (data === 1) {
         props.refreshOnWordUpdate(true);
       }
