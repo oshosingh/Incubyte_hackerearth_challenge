@@ -52,6 +52,7 @@
      1. In the top section, users can enter words and save it in the dictionary.
      2. The second sections, displays the existing words in the database. User can edit the existing word by entering new word
         in the input section and then update it by clicking on the Edit Word button.
+     3. Delete button can be used to delete the word.
         
         ** The left most number denotes id of the word in database. ** 
 
